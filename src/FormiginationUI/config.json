@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "FormiginationUI"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-FormiginationUI-262d2095-e923-46a8-be2f-4bc8db6fd0af;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
