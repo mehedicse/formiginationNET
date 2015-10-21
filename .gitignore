@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 .vs/Formigination_v1.0/v14/.suo
 src/FormiginationUI/config.json
+=======
+src/FormiginationUI/wwwroot/_references.js
+src/FormiginationUI/config.json
+.vs/config/applicationhost.config
+>>>>>>> origin/master
