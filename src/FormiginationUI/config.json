@@ -4,7 +4,7 @@
   },
   "Data": {
     "DefaultConnection": {
-      "ConnectionString": "Persist Security Info=False;User ID=sa;password=azbd;Initial Catalog=ops;Data Source=MEHEDI\\SQL2008;Connection Timeout=100000;"
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-FormiginationUI-262d2095-e923-46a8-be2f-4bc8db6fd0af;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
   }
 }
