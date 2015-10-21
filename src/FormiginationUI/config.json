@@ -12,8 +12,8 @@
   },
   "Authentication": {
     "Facebook": {
-      "AppId": "",
-      "AppSecret": ""
+      "AppId": "1641922116047977",
+      "AppSecret": "47c4ce6a092b824a0803af38359475cb"
     },
     "MicrosoftAccount": {
       "ClientId": "",
