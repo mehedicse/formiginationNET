@@ -8,3 +8,4 @@ src/FormiginationUI/config.json
 >>>>>>> origin/master
 .vs/config/applicationhost.config
 src/FormiginationUI/FormiginationUI.xproj.user
+*.config
