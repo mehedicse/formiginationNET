@@ -6,8 +6,4 @@ src/FormiginationUI/wwwroot/_references.js
 src/FormiginationUI/config.json
 .vs/config/applicationhost.config
 >>>>>>> origin/master
-.vs/config/applicationhost.config
-src/FormiginationUI/FormiginationUI.xproj.user
-*.config
-.vs/config/applicationhost.config
-src/FormiginationUI/config.json
+*.suo
