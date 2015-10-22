@@ -12,6 +12,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FormiginationUI", "src\FormiginationUI\FormiginationUI.xproj", "{8EC5DBCD-A281-4303-BAF0-EC37D9202C66}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreModule", "CoreModule", "{91F98CBC-3213-4EB0-A42A-610C8E52A754}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationModule", "ApplicationModule", "{140B31C5-793F-446C-8D27-8E93BA67F223}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{ABF69590-6E19-4425-B28B-6FC7BD4F6331}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Profile", "Profile", "{F077A155-50A1-4327-A196-402B6945445E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Profile.DataService", "Application.Profile.DataService\Application.Profile.DataService.csproj", "{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Profile.Service", "Application.Profile.Service\Application.Profile.Service.csproj", "{2762D853-1E64-43CD-8A56-C668FE4152D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +34,22 @@ Global
 		{8EC5DBCD-A281-4303-BAF0-EC37D9202C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EC5DBCD-A281-4303-BAF0-EC37D9202C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EC5DBCD-A281-4303-BAF0-EC37D9202C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2762D853-1E64-43CD-8A56-C668FE4152D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2762D853-1E64-43CD-8A56-C668FE4152D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2762D853-1E64-43CD-8A56-C668FE4152D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2762D853-1E64-43CD-8A56-C668FE4152D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8EC5DBCD-A281-4303-BAF0-EC37D9202C66} = {02969963-626B-49A6-86C7-939BDA6DA2BD}
+		{F077A155-50A1-4327-A196-402B6945445E} = {140B31C5-793F-446C-8D27-8E93BA67F223}
+		{DCA62D1F-182E-4CD7-B74C-5B49CB429ECE} = {F077A155-50A1-4327-A196-402B6945445E}
+		{2762D853-1E64-43CD-8A56-C668FE4152D3} = {F077A155-50A1-4327-A196-402B6945445E}
 	EndGlobalSection
 EndGlobal

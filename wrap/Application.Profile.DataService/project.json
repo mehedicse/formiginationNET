@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../Application.Profile.DataService/Application.Profile.DataService.csproj",
+      "bin": {
+        "assembly": "../../Application.Profile.DataService/obj/{configuration}/Application.Profile.DataService.dll",
+        "pdb": "../../Application.Profile.DataService/obj/{configuration}/Application.Profile.DataService.pdb"
+      }
+    },
+    "net451": {
+      "wrappedProject": "../../Application.Profile.DataService/Application.Profile.DataService.csproj",
+      "bin": {
+        "assembly": "../../Application.Profile.DataService/obj/{configuration}/Application.Profile.DataService.dll",
+        "pdb": "../../Application.Profile.DataService/obj/{configuration}/Application.Profile.DataService.pdb"
+      }
+    }
+  }
+}

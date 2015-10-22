@@ -34,7 +34,12 @@
   },
 
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {
+      "dependencies": {
+        "Application.Profile.DataService": "1.0.0-*",
+        "Application.Profile.Service": "1.0.0-*"
+      }
+    },
     "dnxcore50": { }
   },
 

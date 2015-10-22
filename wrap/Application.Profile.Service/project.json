@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../Application.Profile.Service/Application.Profile.Service.csproj",
+      "bin": {
+        "assembly": "../../Application.Profile.Service/obj/{configuration}/Application.Profile.Service.dll",
+        "pdb": "../../Application.Profile.Service/obj/{configuration}/Application.Profile.Service.pdb"
+      }
+    },
+    "net451": {
+      "wrappedProject": "../../Application.Profile.Service/Application.Profile.Service.csproj",
+      "bin": {
+        "assembly": "../../Application.Profile.Service/obj/{configuration}/Application.Profile.Service.dll",
+        "pdb": "../../Application.Profile.Service/obj/{configuration}/Application.Profile.Service.pdb"
+      }
+    }
+  }
+}
