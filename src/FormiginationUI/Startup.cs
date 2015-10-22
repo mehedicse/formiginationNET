@@ -64,6 +64,8 @@ namespace FormiginationUI
             // Configure the options for the authentication middleware.
             // You can add options for Google, Twitter and other middleware as shown below.
             // For more information see http://go.microsoft.com/fwlink/?LinkID=532715
+
+            var app = Configuration["Authentication:Facebook:AppId"];
             services.Configure<FacebookAuthenticationOptions>(options =>
             {
                 options.AppId = Configuration["Authentication:Facebook:AppId"];
@@ -74,7 +76,10 @@ namespace FormiginationUI
             {
                 options.ClientId = Configuration["Authentication:MicrosoftAccount:ClientId"];
                 options.ClientSecret = Configuration["Authentication:MicrosoftAccount:ClientSecret"];
+              
             });
+
+            services.ConfigureFacebookAuthentication(Configuration);
 
             // Add MVC services to the services container.
             services.AddMvc();
@@ -86,11 +91,18 @@ namespace FormiginationUI
             // Register application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
         }
 
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
+            app.UseCookieAuthentication();
+            app.UseFacebookAuthentication();
+            //app.UseFacebookAuthentication();
+
+
             loggerFactory.MinimumLevel = LogLevel.Information;
             loggerFactory.AddConsole();
 
@@ -133,6 +145,9 @@ namespace FormiginationUI
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
             });
+
+
+             
         }
     }
 }
