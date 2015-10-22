@@ -9,3 +9,5 @@ src/FormiginationUI/config.json
 .vs/config/applicationhost.config
 src/FormiginationUI/FormiginationUI.xproj.user
 *.config
+.vs/config/applicationhost.config
+src/FormiginationUI/config.json
