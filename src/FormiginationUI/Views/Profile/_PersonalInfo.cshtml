@@ -1,116 +1,118 @@
 ﻿@model ProfileSettingsViewModel
 @{
-    // ViewBag.Title = "Home Page";
+// ViewBag.Title = "Home Page";
 }
 <script src="~/js/ops/profile/profiledetails.js" asp-file-version="true"></script>
-<div>
+<div class="row">
 
-</div>
-<div class="form-horizontal" >
-    <h4>Create a new account.</h4>
-    <hr />
-    <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="FirstName" class="col-md-4 control-label"></label>
-        <div class="col-md-6">
-            <input asp-for="FirstName" class="k-textbox" />
-            <span asp-validation-for="FirstName" class="text-danger"></span>
+
+
+    <div class="form-horizontal">
+        <h4>Create a new account.</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="FirstName" class="col-md-4 control-label"></label>
+            <div class="col-md-6">
+                <input asp-for="FirstName" class="k-textbox" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="LastName" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="LastName" class="form-control" />
-            <span asp-validation-for="LastName" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="LastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="MiddleName" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="MiddleName" class="form-control" />
-            <span asp-validation-for="MiddleName" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="MiddleName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MiddleName" class="form-control" />
+                <span asp-validation-for="MiddleName" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Birthday" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Birthday" class="form-control" />
-            <span asp-validation-for="Birthday" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Birthday" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Birthday" class="form-control" />
+                <span asp-validation-for="Birthday" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Gender" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Gender" class="form-control" />
-            <span asp-validation-for="Gender" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Gender" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="MeritalStatus" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="MeritalStatus" class="form-control" />
-            <span asp-validation-for="MeritalStatus" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="MeritalStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MeritalStatus" class="form-control" />
+                <span asp-validation-for="MeritalStatus" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="BloodGroup" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="BloodGroup" class="form-control" />
-            <span asp-validation-for="BloodGroup" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="BloodGroup" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BloodGroup" class="form-control" />
+                <span asp-validation-for="BloodGroup" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Religious" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Religious" class="form-control" />
-            <span asp-validation-for="Religious" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Religious" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Religious" class="form-control" />
+                <span asp-validation-for="Religious" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Nationality" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Nationality" class="form-control" />
-            <span asp-validation-for="Nationality" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Nationality" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nationality" class="form-control" />
+                <span asp-validation-for="Nationality" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="NationalId" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="NationalId" class="form-control" />
-            <span asp-validation-for="NationalId" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="NationalId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NationalId" class="form-control" />
+                <span asp-validation-for="NationalId" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="BirthCertificate" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="BirthCertificate" class="form-control" />
-            <span asp-validation-for="BirthCertificate" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="BirthCertificate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BirthCertificate" class="form-control" />
+                <span asp-validation-for="BirthCertificate" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="PassportNo" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="PassportNo" class="form-control" />
-            <span asp-validation-for="PassportNo" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="PassportNo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PassportNo" class="form-control" />
+                <span asp-validation-for="PassportNo" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="SocialId" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="SocialId" class="form-control" />
-            <span asp-validation-for="SocialId" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="SocialId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SocialId" class="form-control" />
+                <span asp-validation-for="SocialId" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="About" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="About" class="form-control" />
-            <span asp-validation-for="About" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="About" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="About" class="form-control" />
+                <span asp-validation-for="About" class="text-danger"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-default">Save</button>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Save</button>
+            </div>
         </div>
     </div>
 </div>
