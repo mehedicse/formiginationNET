@@ -6,7 +6,7 @@
     "DefaultConnection": {
       //"ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-FormiginationUI-262d2095-e923-46a8-be2f-4bc8db6fd0af;Trusted_Connection=True;MultipleActiveResultSets=true"
 
-      "ConnectionString": "Server=AZOLUTION_LAP3\\SQL2012;Database=FormiginationDB;Trusted_Connection=True;MultipleActiveResultSets=true;User Id=sa;Password=azbd"
+      "ConnectionString": "Server=MEHEDI\\SQL2008;Database=ops;Trusted_Connection=True;MultipleActiveResultSets=true;User Id=sa;Password=azbd"
 
     }
   },
