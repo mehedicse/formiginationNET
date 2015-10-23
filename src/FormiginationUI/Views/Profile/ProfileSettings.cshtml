@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ProfileSettings";
+}
+
+<h2>@ViewData["Title"].</h2>
+
+<script src="~/js/ops/profile/profile.js" asp-file-version="true"></script>
+
+@*@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}*@
+
+
+<div id="tabstrip">
+    <ul>
+        <li>Account</li>
+        <li>Personal</li>
+        <li>Education</li>
+        <li>Medical</li>
+        <li>Employment</li>
+
+
+  
+    </ul>
+    <div>@{ await Html.RenderPartialAsync("_AccountInfo"); }</div>
+    <div>@{ await Html.RenderPartialAsync("_PersonalInfo"); }</div>
+    <div>@{ await Html.RenderPartialAsync("_EducationInfo"); }</div>
+    <div>@{ await Html.RenderPartialAsync("_Medical"); }</div>
+    <div>@{ await Html.RenderPartialAsync("_employment"); }</div>
+
+
+
+   
+
+</div>
