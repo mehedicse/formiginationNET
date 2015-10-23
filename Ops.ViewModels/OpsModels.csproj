@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,12 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ops\BloodGroup.cs" />
+    <Compile Include="Ops\Education.cs" />
+    <Compile Include="Ops\EducationalGroup.cs" />
+    <Compile Include="Ops\EducationalLevel.cs" />
+    <Compile Include="Ops\Gender.cs" />
+    <Compile Include="Ops\GeneralAccount.cs" />
+    <Compile Include="Ops\MeritalStatus.cs" />
+    <Compile Include="Ops\Country.cs" />
+    <Compile Include="Ops\PersonalDetails.cs" />
+    <Compile Include="Ops\Religion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ProfileSettingsViewModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

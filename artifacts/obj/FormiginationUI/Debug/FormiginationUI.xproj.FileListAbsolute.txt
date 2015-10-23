@@ -1,1 +1,2 @@
 G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\artifacts\obj\FormiginationUI\Debug\FormiginationUI.xprojResolveAssemblyReference.cache
+G:\Mohidul\Formigination\formiginationNET\artifacts\obj\FormiginationUI\Debug\FormiginationUI.xprojResolveAssemblyReference.cache
