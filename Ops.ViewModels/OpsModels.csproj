@@ -47,9 +47,12 @@
     <Compile Include="Ops\EducationalLevel.cs" />
     <Compile Include="Ops\Gender.cs" />
     <Compile Include="Ops\GeneralAccount.cs" />
+    <Compile Include="Ops\HospitalOrClinic.cs" />
+    <Compile Include="Ops\Medical.cs" />
     <Compile Include="Ops\MeritalStatus.cs" />
     <Compile Include="Ops\Country.cs" />
     <Compile Include="Ops\PersonalDetails.cs" />
+    <Compile Include="Ops\Prescription.cs" />
     <Compile Include="Ops\Religion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

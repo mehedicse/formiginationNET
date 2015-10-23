@@ -1,7 +1,4 @@
-﻿@model ProfileSettingsViewModel
-@{
-// ViewBag.Title = "Home Page";
-}
+﻿
 <script src="~/js/ops/profile/profiledetails.js" asp-file-version="true"></script>
 <div class="row">
 
@@ -11,102 +8,155 @@
         <h4 >Create a new account.</h4>
         <hr />
         <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+        <input name="GeneralAccount" type="hidden" class="k-textbox" />
+        <input name="PersonalDetailsId" type="hidden" class="k-textbox" />
         <div class="form-group">
-            <label asp-for="FirstName" class="col-md-4 control-label"></label>
+            <label name="Name" class="col-md-4 control-label">Name</label>
             <div class="col-md-6">
-                <input name="FirstName" class="k-textbox" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input name="Name" class="k-textbox" />
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="LastName" class="col-md-4 control-label"></label>
+            <label name="FatherName" class="col-md-4 control-label">FatherName</label>
             <div class="col-md-6">
-                <input name="LastName" class="k-textbox" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input name="FatherName" class="k-textbox" />
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="MiddleName" class="col-md-4 control-label"></label>
+            <label name="FatherRefId" class="col-md-4 control-label">FatherRefId</label>
             <div class="col-md-6">
-                <input name="MiddleName" class="k-textbox" />
-                <span asp-validation-for="MiddleName" class="text-danger"></span>
+                <input name="FatherRefId" class="k-textbox" />
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Birthday" class="col-md-4 control-label"></label>
+            <label name="MotherName" class="col-md-4 control-label">MotherName</label>
             <div class="col-md-6">
-                <input name="Birthday" class="k-textbox" />
-                <span asp-validation-for="Birthday" class="text-danger"></span>
+                <input name="MotherName" class="k-textbox" />
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Gender" class="col-md-4 control-label"></label>
+            <label name="MotherRefId" class="col-md-4 control-label">MotherRefId</label>
+            <div class="col-md-6">
+                <input name="MotherRefId" class="k-textbox" />
+                
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="DateOfBirth" class="col-md-4 control-label">Date Of Birth</label>
+            <div class="col-md-6">
+                <input name="DateOfBirth" class="k-textbox" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="Gender" class="col-md-4 control-label">Gender</label>
             <div class="col-md-6">
                 <input name="Gender" class="k-textbox" />
-                <span asp-validation-for="Gender" class="text-danger"></span>
+
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="MeritalStatus" class="col-md-4 control-label"></label>
+            <label name="MeritalStatus" class="col-md-4 control-label">Merital Status</label>
             <div class="col-md-6">
                 <input name="MeritalStatus" class="k-textbox" />
-                <span asp-validation-for="MeritalStatus" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="BloodGroup" class="col-md-4 control-label"></label>
+            <label name="BloodGroup" class="col-md-4 control-label">Blood Group</label>
             <div class="col-md-6">
                 <input name="BloodGroup" class="k-textbox" />
-                <span asp-validation-for="BloodGroup" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Religious" class="col-md-4 control-label"></label>
+            <label name="Religious" class="col-md-4 control-label">Religious</label>
             <div class="col-md-6">
                 <input name="Religious" class="k-textbox" />
-                <span asp-validation-for="Religious" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Nationality" class="col-md-4 control-label"></label>
+            <label name="Nationality" class="col-md-4 control-label">Nationality</label>
             <div class="col-md-6">
                 <input name="Nationality" class="k-textbox" />
-                <span asp-validation-for="Nationality" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="NationalId" class="col-md-4 control-label"></label>
+            <label name="NationalId" class="col-md-4 control-label"></label>
             <div class="col-md-6">
                 <input name="NationalId" class="k-textbox" />
-                <span asp-validation-for="NationalId" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="BirthCertificate" class="col-md-4 control-label"></label>
+            <label name="BirthCertificate" class="col-md-4 control-label">Birth Certificate</label>
             <div class="col-md-6">
                 <input name="BirthCertificate" class="k-textbox" />
-                <span asp-validation-for="BirthCertificate" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="PassportNo" class="col-md-4 control-label"></label>
+            <label name="PassportNo" class="col-md-4 control-label">Passport No</label>
             <div class="col-md-6">
                 <input name="PassportNo" class="k-textbox" />
-                <span asp-validation-for="PassportNo" class="text-danger"></span>
+                
             </div>
         </div>
+      
         <div class="form-group">
-            <label asp-for="SocialId" class="col-md-4 control-label"></label>
+            <label name="SocialSecuirityNo" class="col-md-4 control-label">Social Secuirity No</label>
             <div class="col-md-6">
-                <input name="SocialId" class="k-textbox" />
-                <span asp-validation-for="SocialId" class="text-danger"></span>
+                <input name="SocialSecuirityNo" class="k-textbox" />
+                
+            </div>
+        </div>
+        <div class="form-group"> 
+            <label name="PresentAddress" class="col-md-4 control-label">Present Address</label>
+            <div class="col-md-6">
+                <input name="PresentAddress" class="k-textbox" />
+
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="About" class="col-md-4 control-label"></label>
+            <label name="PermanentAddress" class="col-md-4 control-label">Permanent Address</label>
+            <div class="col-md-6">
+                <input name="PermanentAddress" class="k-textbox" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="CurrentLocation" class="col-md-4 control-label">Current Location</label>
+            <div class="col-md-6">
+                <input name="CurrentLocation" class="k-textbox" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="LandPhone" class="col-md-4 control-label">Land Phone</label>
+            <div class="col-md-6">
+                <input name="LandPhone" class="k-textbox" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="OfficePhone" class="col-md-4 control-label">Office Phone</label>
+            <div class="col-md-6">
+                <input name="OfficePhone" class="k-textbox" />
+
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label name="About" class="col-md-4 control-label"></label>
             <div class="col-md-6">
                 <input name="About" class="k-textbox" />
-                <span asp-validation-for="About" class="text-danger"></span>
+                
             </div>
         </div>
         <div class="form-group">

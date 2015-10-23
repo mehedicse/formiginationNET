@@ -2,6 +2,7 @@
 /// <reference path="../gulpfile.js" />
 /// <reference path="js/ops/profile/accountinfo.js" />
 /// <reference path="js/ops/profile/education.js" />
+/// <reference path="js/ops/profile/medical.js" />
 /// <reference path="js/ops/profile/personalinfo.js" />
 /// <reference path="js/ops/profile/profile.js" />
 /// <reference path="js/ops/profile/profiledetails.js" />
