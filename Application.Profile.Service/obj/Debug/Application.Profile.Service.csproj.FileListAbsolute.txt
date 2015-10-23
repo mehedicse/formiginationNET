@@ -1,5 +1,0 @@
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.Service\bin\Debug\Application.Profile.Service.dll
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.Service\bin\Debug\Application.Profile.Service.pdb
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.Service\obj\Debug\Application.Profile.Service.csprojResolveAssemblyReference.cache
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.Service\obj\Debug\Application.Profile.Service.dll
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.Service\obj\Debug\Application.Profile.Service.pdb

@@ -1,4 +1,0 @@
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.DataService\bin\Debug\Application.Profile.DataService.dll
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.DataService\bin\Debug\Application.Profile.DataService.pdb
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.DataService\obj\Debug\Application.Profile.DataService.dll
-G:\Customer\Zaman bhai\Formigination\Project\formiginationNET\Application.Profile.DataService\obj\Debug\Application.Profile.DataService.pdb
