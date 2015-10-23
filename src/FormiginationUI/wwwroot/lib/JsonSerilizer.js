@@ -1,18 +1,38 @@
-﻿(function ($) {
+﻿//Developer by Md Mohidul Islam Sobuj(Software Engineer), Date:5 November 2013
+//Ezyframwork v1.0.0
+
+
+
+(function ($) {
     $.fn.serializeFormJSON = function () {
 
-        var o = {};
-        var a = this.serializeArray();
-        $.each(a, function () {
-            if (o[this.name]) {
-                if (!o[this.name].push) {
-                    o[this.name] = [o[this.name]];
+        var jsonStr = "";
+        $.each(function () {
+            var name = $(this).attr("name");
+            if (name != undefined) {
+                var type = $(this).attr("type");
+                if ((type == "checkbox" || type == "radio")) {
+                    if ($(this).is(":checked")) {
+                        jsonStr = jsonStr + '"' + name + '"' + ":" + '"' + true + '"' + ","; //1=true
+
+                    } else {
+                        jsonStr = +jsonStr + '"' + name + '"' + ":" + '"' + false + '"' + ","; //0=false
+                    }
+
+                } else if (type != "button" || type != "submit") {
+                    jsonStr = jsonStr + '"' + name + '"' + ":" + '"' + $(this).val() + '"' + ",";
                 }
-                o[this.name].push(this.value || '');
-            } else {
-                o[this.name] = this.value || '';
             }
         });
-        return o;
+        //$(divId + ' textarea').each(function () {
+
+        //    var name = $(this).attr("name");
+        //    if (name != undefined) {
+        //        jsonStr = jsonStr + '"' + name + '"' + ":" + '"' + $(this).val() + '"' + ",";
+        //    }
+        //});
+
+        jsonStr = "{" + jsonStr + "}";
+        return jsonStr;
     };
 })(jQuery);
