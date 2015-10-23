@@ -3,15 +3,17 @@
     // ViewBag.Title = "Home Page";
 }
 <script src="~/js/ops/profile/profiledetails.js" asp-file-version="true"></script>
+<div>
 
-<form asp-controller="Profile" asp-action="SaveProfile" method="post" class="form-horizontal" role="form">
+</div>
+<div class="form-horizontal" >
     <h4>Create a new account.</h4>
     <hr />
     <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
     <div class="form-group">
-        <label asp-for="FirstName" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="FirstName" class="form-control" />
+        <label asp-for="FirstName" class="col-md-4 control-label"></label>
+        <div class="col-md-6">
+            <input asp-for="FirstName" class="k-textbox" />
             <span asp-validation-for="FirstName" class="text-danger"></span>
         </div>
     </div>
@@ -111,4 +113,4 @@
             <button type="submit" class="btn btn-default">Save</button>
         </div>
     </div>
-</form>
+</div>
