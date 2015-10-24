@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="Model\SchedulerEvent.cs" />
+    <Compile Include="SqlQueryBuilder.cs" />
     <Compile Include="UniqCodeGeneratorFromIDPolicy.cs" />
     <Compile Include="Upload\FileExtention.cs" />
     <Compile Include="Upload\FileUploadManager.cs" />
