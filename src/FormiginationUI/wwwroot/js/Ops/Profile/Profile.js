@@ -20,9 +20,4 @@
     //$("#nav-manu").kendoMenu();
 
     ProfileInfoHelper.init();
-    AccountInfoHelper.init();
-    EducationHelper.init();
-    EmploymentHelper.init();
-    MedicalHelper.init();
-    MedicalHelper.init();
 });
