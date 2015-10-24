@@ -14,7 +14,7 @@ namespace Ops.AppServices
 
         public string SavePesonalDetails(PersonalDetails objPersonal)
         {
-            var query=  queryBuilder.GetInsertQuery(objPersonal, "");
+            var query=  queryBuilder.GetInsertQuery(objPersonal);
             return "Success";
         }
 

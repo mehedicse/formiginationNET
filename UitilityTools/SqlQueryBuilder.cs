@@ -9,73 +9,89 @@ namespace UitilityTools
 {
     public class SqlQueryBuilder
     {
-        public string GetInsertQuery<T>(T obj, string columns)
+
+        public string GetInsertQuery<T>(T obj)
         {
             StringBuilder sbValues = new StringBuilder();
             StringBuilder sbColumns = new StringBuilder();
+            string[] arrColumns;
 
-            string[] arrColumns = columns.Split(',');
+
             Type entityType = typeof(T);
             PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(entityType);
 
 
             string qryTmp = "Insert into {0} ({1}) values({2})";
             string tableName = entityType.Name;
-         
+
             foreach (PropertyDescriptor prop in properties)
 
             {
-               
-                foreach (var item in arrColumns)
+
+
+                dynamic val;
+
+                if (prop.PropertyType.Name == "DateTime")
                 {
-                    dynamic val;
-                    if (item.ToLower().Equals(prop.Name.ToLower()))
+                    var value = prop.GetValue(obj);
+                    if (value != null)
                     {
-                        if (prop.PropertyType.Name == "DateTime")
+                        var date = (DateTime)value;
+                        sbValues.Append("'");
+                        sbValues.Append(date);
+                        sbValues.Append("'");
+                        sbValues.Append(",");
+
+                        sbColumns.Append(prop.Name);
+                        sbColumns.Append(",");
+
+
+                    }
+                }
+                else if (prop.PropertyType.Name == "Int32")
+                {
+                    val = prop.GetValue(obj);
+                    if (val != null)
+                    {
+                        if (val > 0)
                         {
-                            var value = prop.GetValue(obj);
-                            if (value != null)
-                            {
-                                var date = (DateTime)value;
-                                sbValues.Append("'");
-                                sbValues.Append(date);
-                                sbValues.Append("'");
+                            sbValues.Append("'");
+                            sbValues.Append(val);
+                            sbValues.Append("'");
+                            sbValues.Append(",");
 
-                                sbValues.Append(",");
-
-                                sbColumns.Append(item);
-                                sbColumns.Append(",");
-
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            //var isType = TypeArray().Contains(prop.PropertyType.Name);
-                            //if (isType)
-                            //{
-                            val = prop.GetValue(obj);
-                            if (val != null)
-                            {
-                                sbValues.Append("'");
-                                sbValues.Append(val);
-                                sbValues.Append("'");
-                                
-                                sbValues.Append(",");
-
-                                sbColumns.Append(item);
-                                sbColumns.Append(",");
-
-                                break;
-                            }
-
-                            //}
-
+                            sbColumns.Append(prop.Name);
+                            sbColumns.Append(",");
 
                         }
+
+
                     }
 
                 }
+                else
+                {
+
+                    val = prop.GetValue(obj);
+                    if (val != null)
+                    {
+
+                        sbValues.Append("'");
+                        sbValues.Append(val);
+                        sbValues.Append("'");
+                        sbValues.Append(",");
+
+                        sbColumns.Append(prop.Name);
+                        sbColumns.Append(",");
+
+
+                    }
+
+
+
+
+                }
+
 
 
             }
@@ -83,6 +99,171 @@ namespace UitilityTools
             sbValues.Remove(sbValues.Length - 1, 1);
 
             var rvStr = string.Format(qryTmp, tableName, sbColumns.ToString(), sbValues.ToString());
+            return rvStr;
+        }
+        public string GetInsertQuery<T>(T obj, string columns)
+        {
+            StringBuilder sbValues = new StringBuilder();
+            StringBuilder sbColumns = new StringBuilder();
+            string[] arrColumns;
+            if (string.IsNullOrEmpty(columns))
+            {
+                arrColumns = new string[] { };
+            }
+            else
+            {
+                arrColumns = columns.Split(',');
+            }
+
+            Type entityType = typeof(T);
+            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(entityType);
+
+
+            string qryTmp = "Insert into {0} ({1}) values({2})";
+            string tableName = entityType.Name;
+
+            foreach (PropertyDescriptor prop in properties)
+
+            {
+                string columnName = "";
+                if (arrColumns.Length > 0)
+                {
+                    columnName = arrColumns.FirstOrDefault(s => s.ToLower().Equals(prop.Name.ToLower()));
+                }
+
+                dynamic val;
+                if (!string.IsNullOrEmpty(columnName))
+                {
+                    if (prop.PropertyType.Name == "DateTime")
+                    {
+                        var value = prop.GetValue(obj);
+                        if (value != null)
+                        {
+                            var date = (DateTime)value;
+                            sbValues.Append("'");
+                            sbValues.Append(date);
+                            sbValues.Append("'");
+                            sbValues.Append(",");
+
+                            sbColumns.Append(prop.Name);
+                            sbColumns.Append(",");
+
+
+                        }
+                    }
+                    else
+                    {
+
+                        val = prop.GetValue(obj);
+                        if (val != null)
+                        {
+                            sbValues.Append("'");
+                            sbValues.Append(val);
+                            sbValues.Append("'");
+                            sbValues.Append(",");
+
+                            sbColumns.Append(prop.Name);
+                            sbColumns.Append(",");
+
+
+                        }
+
+
+                    }
+
+                }
+
+
+
+            }
+            sbColumns.Remove(sbColumns.Length - 1, 1);
+            sbValues.Remove(sbValues.Length - 1, 1);
+
+            var rvStr = string.Format(qryTmp, tableName, sbColumns.ToString(), sbValues.ToString());
+            return rvStr;
+
+        }
+
+        public string GetUpdateQuery<T>(T obj, string columns,string condition)
+        {
+            StringBuilder sbValues = new StringBuilder();
+           
+            string[] arrColumns;
+            if (string.IsNullOrEmpty(columns))
+            {
+                arrColumns = new string[] { };
+            }
+            else
+            {
+                arrColumns = columns.Split(',');
+            }
+
+            Type entityType = typeof(T);
+            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(entityType);
+
+
+            string qryTmp = "Update {0} {1} Where {2}";//0 Table,1 set value 2 condition
+            string tableName = entityType.Name;
+            sbValues.Append(" Set ");
+            foreach (PropertyDescriptor prop in properties)
+
+            {
+                string columnName = "";
+                if (arrColumns.Length > 0)
+                {
+                    columnName = arrColumns.FirstOrDefault(s => s.ToLower().Equals(prop.Name.ToLower()));
+                }
+
+                dynamic val;
+                if (!string.IsNullOrEmpty(columnName))
+                {
+                    if (prop.PropertyType.Name == "DateTime")
+                    {
+                        var value = prop.GetValue(obj);
+                        if (value != null)
+                        {
+                            var date = (DateTime)value;
+
+                           
+                            sbValues.Append(prop.Name);
+                            sbValues.Append("=");
+                            sbValues.Append("'");
+                            sbValues.Append(date);
+                            sbValues.Append("'");
+                            sbValues.Append(",");
+ 
+
+                        }
+                    }
+                    else
+                    {
+
+                        val = prop.GetValue(obj);
+                        if (val != null)
+                        {
+                          
+                            sbValues.Append(prop.Name);
+                            sbValues.Append("=");
+                            sbValues.Append("'");
+                            sbValues.Append(val);
+                            sbValues.Append("'");
+                            sbValues.Append(",");
+
+
+                        }
+
+
+                    }
+
+                }
+
+
+
+            }
+         
+            sbValues.Remove(sbValues.Length - 1, 1);
+
+            var rvStr = string.Format(qryTmp, tableName, sbValues.ToString(), condition);
             return rvStr;
 
         }
