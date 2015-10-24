@@ -31,7 +31,7 @@ var EmploymentHelper = {
 
     },
     createEmploymentObj: function () {
-        var obj = Object();
+        var obj = new Object();
         obj.GeneralAccount = $("#GeneralAccount").val();
         obj.EmploymentId = $("#EmploymentId").val();
         obj.CompanyName = $("#CompanyName").val();

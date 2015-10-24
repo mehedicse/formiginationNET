@@ -28,10 +28,10 @@
 
 var ProfileInfoHelper = {
     init: function () {
-
+        $("#DateOfBirth").data('kendoDatetimePicker')
     },
     createProfileObj: function () {
-        var obj = Object();
+        var obj = new Object();
         obj.GeneralAccount = $("#GeneralAccount").val();
         obj.PersonalDetailsId = $("#PersonalDetailsId").val();
         obj.Name = $("#Name").val();

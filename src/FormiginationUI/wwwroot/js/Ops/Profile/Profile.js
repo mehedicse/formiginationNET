@@ -18,4 +18,6 @@
  
 
     //$("#nav-manu").kendoMenu();
+
+    ProfileInfoHelper.init();
 });
