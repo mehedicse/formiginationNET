@@ -15,10 +15,10 @@ namespace TestConsole
             var acc = new GeneralAccount();
             acc.Name = "Sobuj";
             acc.Email = "sobuj.ah@gmail.com";
-            acc.GeneralAccountId = 1;
+            acc.GeneralAccountId = 0;
             acc.LastPasswordChanged = DateTime.Now;
             SqlQueryBuilder sb = new SqlQueryBuilder();
-            sb.GetInsertQuery(acc, "Name,GeneralAccountId,Email,LastPasswordChanged");
+            sb.GetUpdateQuery(acc, "Name,Email,LastPasswordChanged", "GeneralAccountId="+ 1);
         }
     }
 }
