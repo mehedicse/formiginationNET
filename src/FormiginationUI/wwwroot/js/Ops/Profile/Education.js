@@ -28,19 +28,21 @@
 
 var EducationHelper = {
     init: function () {
-
+        $("#btnEducationSave").click(function () {
+            EducationManager.saveEducation();
+        });
     },
     createEducationObj: function () {
         var obj = new Object();
-        obj.EducationId = $("#EducationId").val();
-        obj.GeneralAccount = $("#GeneralAccount").val();
-        obj.EducationalLevel = $("#EducationalLevel").val();
-        obj.DegreeTitle = $("#DegreeTitle").val();
-        obj.EducationalGroup = $("#EducationalGroup").val();
-        obj.InstituteName = $("#InstituteName").val();
-        obj.YearofPassing = $("#YearofPassing").val();
-        obj.Duration = $("#Duration").val();
-        obj.Result = $("#Result").val();
+        obj.EducationId = $("#txtEducationId").val();
+        obj.GeneralAccount = $("#txtGeneralAccount").val();
+        obj.EducationalLevel = $("#txtEducationalLevel").val();
+        obj.DegreeTitle = $("#txtDegreeTitle").val();
+        obj.EducationalGroup = $("#txtEducationalGroup").val();
+        obj.InstituteName = $("#txtInstituteName").val();
+        obj.YearofPassing = $("#txtYearofPassing").val();
+        obj.Duration = $("#txtDuration").val();
+        obj.Result = $("#txtResult").val();
 
         return obj;
     },

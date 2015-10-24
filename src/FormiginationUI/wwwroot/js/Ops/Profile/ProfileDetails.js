@@ -28,33 +28,42 @@
 
 var ProfileInfoHelper = {
     init: function () {
-        $("#DateOfBirth").data('kendoDatetimePicker')
+        
+        $("#dpDateOfBirth").kendoDatePicker({ value: new Date() });
+        kendoManager.ComboboxWithDS("cmbGender", "GenderTitle", "GenderId", "../Account/GetGenderComboData");
+        kendoManager.ComboboxWithDS("cmbBloodGroup", "BloodGroupTitle", "BloodGroupId", "../Account/GetBloodGroupComboData");
+        kendoManager.ComboboxWithDS("cmbMeritalStatus", "MeritalStatusTitle", "MeritalStatusId", "../Account/GetMeritalStatusComboData");
+        kendoManager.ComboboxWithDS("cmbReligious", "RelegionTitle", "RelegionId", "../Account/GetReligionComboData");
+        //  kendoManager.ComboboxWithDS("cmbCountry", "CountryName", "CountryId", "../Account/GetCountryComboData");
+        $("#btnProfileSave").click(function () {
+            ProfileInfoManager.saveProfileInfo();
+        });
     },
     createProfileObj: function () {
         var obj = new Object();
-        obj.GeneralAccount = $("#GeneralAccount").val();
-        obj.PersonalDetailsId = $("#PersonalDetailsId").val();
-        obj.Name = $("#Name").val();
-        obj.FatherName = $("#FatherName").val();
-        obj.FatherRefId = $("#FatherRefId").val();
-        obj.MotherName = $("#MotherName").val();
-        obj.MotherRefId = $("#MotherRefId").val();
-        obj.DateOfBirth = $("#DateOfBirth").val();
-        obj.Gender = $("#Gender").val();
-        obj.MeritalStatus = $("#MeritalStatus").val();
-        obj.BloodGroup = $("#BloodGroup").val();
-        obj.Religion = $("#Religion").val();
-        obj.Country = $("#Country").val();
-        obj.NationalIdNo = $("#NationalIdNo").val();
-        obj.BirthCertificateNo = $("#BirthCertificateNo").val();
-        obj.PassportNo = $("#PassportNo").val();
-        obj.SocialSecuirityNo = $("#SocialSecuirityNo").val();
-        obj.PresentAddress = $("#PresentAddress").val();
-        obj.PermanentAddress = $("#PermanentAddress").val();
-        obj.CurrentLocation = $("#CurrentLocation").val();
-        obj.LandPhone = $("#LandPhone").val();
-        obj.Mobile = $("#Mobile").val();
-        obj.OfficePhone = $("#OfficePhone").val();
+        obj.GeneralAccount = $("#txtGeneralAccount").val();
+        obj.PersonalDetailsId = $("#txtPersonalDetailsId").val();
+        obj.Name = $("#txtName").val();
+        obj.FatherName = $("#txtFatherName").val();
+        obj.FatherRefId = $("#txtFatherRefId").val();
+        obj.MotherName = $("#txtMotherName").val();
+        obj.MotherRefId = $("#txtMotherRefId").val();
+        obj.DateOfBirth = $("#dpDateOfBirth").val();
+        obj.Gender = $("#cmbGender").val();
+        obj.MeritalStatus = $("#cmbMeritalStatus").val();
+        obj.BloodGroup = $("#cmbBloodGroup").val();
+        obj.Religion = $("#cmbReligion").val();
+        
+        obj.NationalIdNo = $("#txtNationalIdNo").val();
+        obj.BirthCertificateNo = $("#txtBirthCertificateNo").val();
+        obj.PassportNo = $("#txtPassportNo").val();
+        obj.SocialSecuirityNo = $("#txtSocialSecuirityNo").val();
+        obj.PresentAddress = $("#txtPresentAddress").val();
+        obj.PermanentAddress = $("#txtPermanentAddress").val();
+        obj.CurrentLocation = $("#txtCurrentLocation").val();
+        obj.LandPhone = $("#txtLandPhone").val();
+        obj.Mobile = $("#txtMobile").val();
+        obj.OfficePhone = $("#txtOfficePhone").val();
 
         return obj;
     },

@@ -28,23 +28,25 @@
 
 var AccountInfoHelper = {
     init: function () {
-
+        $("#btnAccountSave").click(function () {
+            AccountInfoManager.saveAccountInfo();
+        });
     },
     createAccountObj: function () {
         var obj = new Object();
-        obj.GeneralAccountId = $("#GeneralAccountId").val();
-        obj.Name = $("#Name").val();
-        obj.UserName = $("#UserName").val();
-        obj.Email = $("#Email").val();
-        obj.AlternateEmail = $("#AlternateEmail").val();
-        obj.Facebook = $("#Facebook").val();
-        obj.Gmail = $("#Gmail").val();
-        obj.Yahoo = $("#Yahoo").val();
-        obj.LinkedIn = $("#LinkedIn").val();
-        obj.Twitter = $("#Twitter").val();
-        obj.Microsoft = $("#Microsoft").val();
-        obj.Skype = $("#Skype").val();
-        obj.About = $("#About").val();
+        obj.GeneralAccountId = $("#txtGeneralAccountId").val();
+        obj.Name = $("#txtName").val();
+        obj.UserName = $("#txtUserName").val();
+        obj.Email = $("#txtEmail").val();
+        obj.AlternateEmail = $("#txtAlternateEmail").val();
+        obj.Facebook = $("#txtFacebook").val();
+        obj.Gmail = $("#txtGmail").val();
+        obj.Yahoo = $("#txtYahoo").val();
+        obj.LinkedIn = $("#txtLinkedIn").val();
+        obj.Twitter = $("#txtTwitter").val();
+        obj.Microsoft = $("#txtMicrosoft").val();
+        obj.Skype = $("#txtSkype").val();
+        obj.About = $("#txtAbout").val();
 
         return obj;
     },
