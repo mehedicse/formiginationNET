@@ -20,6 +20,7 @@
     <ProjectReference Include="..\..\Application.Profile.Service\Application.Profile.Service.csproj" />
     <ProjectReference Include="..\..\Ops.AppServices\Ops.AppServices.csproj" />
     <ProjectReference Include="..\..\Ops.ViewModels\OpsModels.csproj" />
+    <ProjectReference Include="..\..\OpsAppsService\OpsAppsService.csproj" />
     <ProjectReference Include="..\..\UitilityTools\UitilityTools.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />

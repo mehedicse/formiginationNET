@@ -28,21 +28,23 @@
 
 var EmploymentHelper = {
     init: function () {
-
+        $("#btnEmployment").click(function () {
+            EmploymentManager.saveEmployment();
+        });
     },
     createEmploymentObj: function () {
         var obj = new Object();
-        obj.GeneralAccount = $("#GeneralAccount").val();
-        obj.EmploymentId = $("#EmploymentId").val();
-        obj.CompanyName = $("#CompanyName").val();
-        obj.CompanyBusiness = $("#CompanyBusiness").val();
-        obj.CompanyLocation = $("#CompanyLocation").val();
-        obj.Position = $("#Position").val();
-        obj.Department = $("#Department").val();
-        obj.Responsibilities = $("#Responsibilities").val();
-        obj.EmploymentDateFrom = $("#EmploymentDateFrom").val();
-        obj.EmploymentDateTo = $("#EmploymentDateTo").val();
-        obj.IsWorking = $("#IsWorking").val();
+        obj.GeneralAccount = $("#txtGeneralAccount").val();
+        obj.EmploymentId = $("#txtEmploymentId").val();
+        obj.CompanyName = $("#txtCompanyName").val();
+        obj.CompanyBusiness = $("#txtCompanyBusiness").val();
+        obj.CompanyLocation = $("#txtCompanyLocation").val();
+        obj.Position = $("#txtPosition").val();
+        obj.Department = $("#txtDepartment").val();
+        obj.Responsibilities = $("#txtResponsibilities").val();
+        obj.EmploymentDateFrom = $("#txtEmploymentDateFrom").val();
+        obj.EmploymentDateTo = $("#txtEmploymentDateTo").val();
+        obj.IsWorking = $("#txtIsWorking").val();
 
         return obj;
     },

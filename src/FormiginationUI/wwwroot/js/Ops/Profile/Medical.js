@@ -28,18 +28,20 @@
 
 var MedicalHelper = {
     init: function () {
-
+        $("#btnMedicalSave").click(function () {
+            MedicalManager.saveMedical();
+        });
     },
     createMedicalObj: function () {
         var obj = new Object();
-        obj.MedicalId = $("#MedicalId").val();
-        obj.DoctorName = $("#DoctorName").val();
-        obj.hospitalOrClinic = $("#hospitalOrClinic").val();
-        obj.prescriptionOrReport = $("#prescriptionOrReport").val();
-        obj.TreatementFrom = $("#TreatementFrom").val();
-        obj.TreatementTo = $("#TreatementTo").val();
-        obj.TreatementPurpose = $("#TreatementPurpose").val();
-        obj.Description = $("#Description").val();
+        obj.MedicalId = $("#txtMedicalId").val();
+        obj.DoctorName = $("#txtDoctorName").val();
+        obj.hospitalOrClinic = $("#txthospitalOrClinic").val();
+        obj.prescriptionOrReport = $("#txtprescriptionOrReport").val();
+        obj.TreatementFrom = $("#txtTreatementFrom").val();
+        obj.TreatementTo = $("#txtTreatementTo").val();
+        obj.TreatementPurpose = $("#txtTreatementPurpose").val();
+        obj.Description = $("#txtDescription").val();
        
         return obj;
     },

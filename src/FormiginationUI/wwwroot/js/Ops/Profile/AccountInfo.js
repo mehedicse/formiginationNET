@@ -1,16 +1,18 @@
-﻿var AccountInfoManager = {
-    saveAccountInfo: function () {
+﻿/// <reference path="~/lib/AjaxController.js" />
 
+var AccountInfoManager = {
+    saveAccountInfo: function () {
+        debugger;
             var accountObj = AccountInfoHelper.createAccountObj();
-            var jsonParam = 'accountObj=' + accountObj;
-            var serviceUrl = "../Account/SaveAccountInfo/";
-            AjaxManager.SaveObject(serviceUrl, jsonParam, onSuccess);
+            var jsonParam = 'accountObj=' + JSON.stringify(accountObj);
+            var serviceUrl = "../Profile/SaveAccountInfo/";
+            AjaxController.SaveObject(serviceUrl, jsonParam, onSuccess);
         
 
         function onSuccess(jsonData) {
             if (jsonData == "Success") {
 
-                AjaxManager.MsgBox('success', 'center', 'Success:', 'Account Info Save/Update Successfully',
+                AjaxController.MsgBox('success', 'center', 'Success:', 'Account Info Save/Update Successfully',
                     [{
                         addClass: 'btn btn-primary',
                         text: 'Ok',
@@ -28,23 +30,25 @@
 
 var AccountInfoHelper = {
     init: function () {
-
+        $("#btnAccountSave").click(function () {
+            AccountInfoManager.saveAccountInfo();
+        });
     },
     createAccountObj: function () {
         var obj = new Object();
-        obj.GeneralAccountId = $("#GeneralAccountId").val();
-        obj.Name = $("#Name").val();
-        obj.UserName = $("#UserName").val();
-        obj.Email = $("#Email").val();
-        obj.AlternateEmail = $("#AlternateEmail").val();
-        obj.Facebook = $("#Facebook").val();
-        obj.Gmail = $("#Gmail").val();
-        obj.Yahoo = $("#Yahoo").val();
-        obj.LinkedIn = $("#LinkedIn").val();
-        obj.Twitter = $("#Twitter").val();
-        obj.Microsoft = $("#Microsoft").val();
-        obj.Skype = $("#Skype").val();
-        obj.About = $("#About").val();
+        obj.GeneralAccountId = $("#txtGeneralAccountId").val();
+        obj.Name = $("#txtName").val();
+        obj.UserName = $("#txtUserName").val();
+        obj.Email = $("#txtEmail").val();
+        obj.AlternateEmail = $("#txtAlternateEmail").val();
+        obj.Facebook = $("#txtFacebook").val();
+        obj.Gmail = $("#txtGmail").val();
+        obj.Yahoo = $("#txtYahoo").val();
+        obj.LinkedIn = $("#txtLinkedIn").val();
+        obj.Twitter = $("#txtTwitter").val();
+        obj.Microsoft = $("#txtMicrosoft").val();
+        obj.Skype = $("#txtSkype").val();
+        obj.About = $("#txtAbout").val();
 
         return obj;
     },

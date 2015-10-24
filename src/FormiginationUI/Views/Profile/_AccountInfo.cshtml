@@ -3,6 +3,7 @@
 // ViewBag.Title = "Home Page";
 }
 <script src="~/js/ops/profile/accountDetails.js" asp-file-version="true"></script>
+
 <div class="row">
 
     <div class="form-horizontal">
@@ -10,76 +11,76 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
         
-            <label name="GeneralAccountId" style="display:none" class="col-md-4 control-label"></label>
-           
+            
+        <input name="GeneralAccountId" type="hidden" id="txtGeneralAccountId" class="k-textbox" />
         
         <div class="form-group">
             <label name="Name" class="col-md-4 control-label">Name</label>
             <div class="col-md-6">
-                <input name="Name" class="k-textbox" />
+                <input name="Name" id="txtName" class="k-textbox" />
               
             </div>
         </div>
         <div class="form-group">
             <label name="UserName" class="col-md-4 control-label">User Name</label>
             <div class="col-md-6">
-                <input name="UserName" class="k-textbox" />
+                <input name="UserName" id="txtUserName" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Email" class="col-md-4 control-label">Email</label>
             <div class="col-md-6">
-                <input name="Email" class="k-textbox" />
+                <input name="Email" id="txtEmail" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="AlternateEmail" class="col-md-4 control-label">Alternate Email</label>
             <div class="col-md-6">
-                <input name="AlternateEmail" class="k-textbox" />
+                <input name="AlternateEmail" id="txtAlternateEmail" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Facebook" class="col-md-4 control-label">Facebook</label>
             <div class="col-md-6">
-                <input name="Facebook" class="k-textbox" />
+                <input name="Facebook" id="txtFacebook" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Gmail" class="col-md-4 control-label">Gmail</label>
             <div class="col-md-6">
-                <input name="Gmail" class="k-textbox" />
+                <input name="Gmail" id="txtGmail" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Yahoo" class="col-md-4 control-label">Yahoo</label>
             <div class="col-md-6">
-                <input name="Yahoo" class="k-textbox" />
+                <input name="Yahoo" id="txtYahoo" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="LinkedIn" class="col-md-4 control-label">LinkedIn</label>
             <div class="col-md-6">
-                <input name="LinkedIn" class="k-textbox" />
+                <input name="LinkedIn" id="txtLinkedIn" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Twitter" class="col-md-4 control-label">Twitter</label>
             <div class="col-md-6">
-                <input name="Twitter" class="k-textbox" />
+                <input name="Twitter" id="txtTwitter" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <label name="Microsoft" class="col-md-4 control-label">Microsoft</label>
             <div class="col-md-6">
-                <input name="Microsoft" class="k-textbox" />
+                <input name="Microsoft" id="txtMicrosoft" class="k-textbox" />
                 
             </div>
         </div>
@@ -87,7 +88,7 @@
         <div class="form-group">
             <label name="Skype" class="col-md-4 control-label">Skype</label>
             <div class="col-md-6">
-                <input name="Skype" class="k-textbox" />
+                <input name="Skype" id="txtSkype" class="k-textbox" />
                 
             </div>
         </div>
@@ -95,13 +96,13 @@
         <div class="form-group">
             <label name="About" class="col-md-4 control-label">About</label>
             <div class="col-md-6">
-                <input name="About" class="k-textbox" />
+                <input name="About" id="txtAbout" class="k-textbox" />
                 
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-4 col-md-6">
-                <button type="submit" class="btn btn-default">Save</button>
+                <button type="submit" id="btnAccountSave" class="btn btn-default">Save</button>
             </div>
         </div>
     </div>
