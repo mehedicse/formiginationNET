@@ -31,7 +31,7 @@ var EducationHelper = {
 
     },
     createEducationObj: function () {
-        var obj = Object();
+        var obj = new Object();
         obj.EducationId = $("#EducationId").val();
         obj.GeneralAccount = $("#GeneralAccount").val();
         obj.EducationalLevel = $("#EducationalLevel").val();

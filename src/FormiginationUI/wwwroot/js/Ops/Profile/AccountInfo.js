@@ -31,7 +31,7 @@ var AccountInfoHelper = {
 
     },
     createAccountObj: function () {
-        var obj = Object();
+        var obj = new Object();
         obj.GeneralAccountId = $("#GeneralAccountId").val();
         obj.Name = $("#Name").val();
         obj.UserName = $("#UserName").val();

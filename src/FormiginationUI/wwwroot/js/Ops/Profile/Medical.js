@@ -31,7 +31,7 @@ var MedicalHelper = {
 
     },
     createMedicalObj: function () {
-        var obj = Object();
+        var obj = new Object();
         obj.MedicalId = $("#MedicalId").val();
         obj.DoctorName = $("#DoctorName").val();
         obj.hospitalOrClinic = $("#hospitalOrClinic").val();
