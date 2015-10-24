@@ -37,7 +37,8 @@
         "dnx451": {
             "dependencies": {
                 "UitilityTools": "1.0.0-*",
-                "OpsModels": "1.0.0-*"
+                "OpsModels": "1.0.0-*",
+                "Ops.AppServices": "1.0.0-*"
 
 
             }
