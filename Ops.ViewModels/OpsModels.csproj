@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ops\BloodGroup.cs" />
+    <Compile Include="Ops\CompanyBusiness.cs" />
     <Compile Include="Ops\Education.cs" />
     <Compile Include="Ops\EducationalGroup.cs" />
     <Compile Include="Ops\EducationalLevel.cs" />
+    <Compile Include="Ops\Employment.cs" />
     <Compile Include="Ops\Gender.cs" />
     <Compile Include="Ops\GeneralAccount.cs" />
     <Compile Include="Ops\HospitalOrClinic.cs" />
