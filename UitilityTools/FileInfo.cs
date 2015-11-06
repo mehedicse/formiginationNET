@@ -18,8 +18,11 @@ namespace UitilityTools
             {
 
                 string[] arrStr = ContentDisposition.Split(';');
-                FileName = arrStr[2].Trim();
-                Extension = FileName.Split('.')[1];
+
+                FileName = (arrStr[2].Trim().Split('='))[1].ToString();
+                Extension = "."+FileName.Split('.')[1].Replace('"',' ').ToString();
+                FileName = FileName.Replace('"', ' ');
+                FileName = FileName.Remove(FileName.Length- Extension.Length, Extension.Length);
 
             }
         }

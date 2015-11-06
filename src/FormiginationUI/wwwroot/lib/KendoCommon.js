@@ -53,11 +53,11 @@
 
     Upload: function (ctrId, url) {
         $("#" + ctrId).kendoUpload({
-            upload: onUpload,
+            //upload: onUpload,
             multiple: false,
             success: onSuccess,
-           // error: onError,
-           // select: onSelect,
+           error: onError,
+           select: onSelect,
            // progress: onProgress,
             async: {
                 saveUrl: url + "UploadFile",

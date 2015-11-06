@@ -15,7 +15,7 @@ namespace FormiginationUI.Controllers
 
 
         public IHostingEnvironment HostingEnvironment { get; set; }
-       public FileUploaderController(IHostingEnvironment hostingEnvironment)
+        public FileUploaderController(IHostingEnvironment hostingEnvironment)
         {
             HostingEnvironment = hostingEnvironment;
         }
@@ -26,15 +26,23 @@ namespace FormiginationUI.Controllers
         {
 
             HostingEnvironment.IsDevelopment();
-           
+
 
 
 
             foreach (var f in files)
             {
-                FileDesc fileInfo = new FileDesc(f.ContentDisposition,f.Length);
+                FileDesc fileInfo = new FileDesc(f.ContentDisposition, f.Length);
+                var webpath = HostingEnvironment.WebRootPath;
 
-                await f.SaveAsAsync(Path.Combine(HostingEnvironment.WebRootPath, "newFile_"+DateTime.Now.ToString("ddMMyyyyHHss") + files.IndexOf(f)));
+                var path = Path.Combine(webpath, "Documents");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+
+                }
+
+                await f.SaveAsAsync(Path.Combine(path, fileInfo.FileName + DateTime.Now.ToString("_ddMMyyyyHHss") + fileInfo.Extension));
             }
 
             return Json("OK");

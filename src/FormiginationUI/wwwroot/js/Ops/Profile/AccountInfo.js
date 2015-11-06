@@ -2,7 +2,7 @@
 
 var AccountInfoManager = {
     saveAccountInfo: function () {
-        debugger;
+      
             var accountObj = AccountInfoHelper.createAccountObj();
             var jsonParam = 'accountObj=' + JSON.stringify(accountObj);
             var serviceUrl = "../Profile/SaveAccountInfo/";
@@ -12,7 +12,7 @@ var AccountInfoManager = {
         function onSuccess(jsonData) {
             if (jsonData == "Success") {
 
-                AjaxController.MsgBox('success', 'center', 'Success:', 'Account Info Save/Update Successfully',
+                AjaxController.MsgBox('success', 'center', 'Success', 'Account Info Save/Update Successfully',
                     [{
                         addClass: 'btn btn-primary',
                         text: 'Ok',
