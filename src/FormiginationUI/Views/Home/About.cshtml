@@ -5,3 +5,13 @@
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+<input type="file" id="fileUpload" name="files" aria-busy="true" />
+
+<script>
+
+    $(document).ready(function () {
+        kendoManager.Upload('fileUpload', '../FileUploader/UploadFile/');
+
+
+    });
+</script>

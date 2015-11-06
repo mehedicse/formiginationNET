@@ -2809,7 +2809,8 @@
       "Microsoft.Framework.Configuration.UserSecrets >= 1.0.0-beta5",
       "Microsoft.Framework.Logging >= 1.0.0-beta5",
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta5",
-      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta5"
+      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta5",
+      "Microsoft.Net.Http.Headers >= 1.0.0-beta5"
     ],
     "DNX,Version=v4.5.1": [
       "UitilityTools >= 1.0.0-*",

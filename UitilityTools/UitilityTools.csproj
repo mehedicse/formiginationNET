@@ -79,6 +79,7 @@
     <Compile Include="AzFilter.cs" />
     <Compile Include="BulkInsert.cs" />
     <Compile Include="DateDifference.cs" />
+    <Compile Include="FileInfo.cs" />
     <Compile Include="Folder.cs" />
     <Compile Include="ImageConverter.cs" />
     <Compile Include="Model\ChartEntity.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="Model\SchedulerEvent.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="SqlQueryBuilder.cs" />
     <Compile Include="UniqCodeGeneratorFromIDPolicy.cs" />
     <Compile Include="Upload\FileExtention.cs" />
