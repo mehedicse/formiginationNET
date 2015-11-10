@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     $("#tabstrip").kendoTabStrip({
+        tabPosition: "left",
         animation: {
             // fade-out current tab over 1000 milliseconds
             close: {

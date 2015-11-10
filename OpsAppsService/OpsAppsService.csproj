@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProfileDataService.cs" />
+    <Compile Include="DataService\MasterDataService.cs" />
+    <Compile Include="DataService\ProfileDataService.cs" />
+    <Compile Include="IMasterDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

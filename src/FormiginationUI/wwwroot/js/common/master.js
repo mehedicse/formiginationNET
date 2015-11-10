@@ -1,0 +1,7 @@
+﻿master = {
+    GetGendar: function () {
+
+    }
+
+
+}

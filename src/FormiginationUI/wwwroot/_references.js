@@ -1,5 +1,6 @@
 ﻿/// <autosync enabled="true" />
 /// <reference path="../gulpfile.js" />
+/// <reference path="js/common/master.js" />
 /// <reference path="js/ops/profile/accountinfo.js" />
 /// <reference path="js/ops/profile/education.js" />
 /// <reference path="js/ops/profile/employment.js" />
