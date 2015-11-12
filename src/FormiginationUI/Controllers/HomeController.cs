@@ -13,6 +13,12 @@ namespace FormiginationUI.Controllers
             return View();
         }
 
+        [Route("/{0}")]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

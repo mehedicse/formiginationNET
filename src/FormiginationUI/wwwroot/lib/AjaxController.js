@@ -1,11 +1,28 @@
-﻿ 
+﻿
 
 var LoggedInUserName = '';
 var serviceRoot = "..";
 var CurrentUser = null;
 var AjaxController = {
 
-
+    GetObject: function (serviceUrl, jsonParams) {
+        var objData = new Object();
+        jQuery.ajax({
+            url: serviceUrl,
+            async: false,
+            type: "POST",
+            data: "{" + jsonParams + "}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                objData = data;
+            },
+            error: function (error) {
+                alert(error);
+            }
+        });
+        return objData;
+    },
 
     //MVC call
     GetJsonResult: function (serviceUrl, jsonParams, isAsync, isCache, successCallback, errorCallback) {
@@ -55,7 +72,7 @@ var AjaxController = {
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: successCallback,
-            error: function(error) {
+            error: function (error) {
                 alert(error);
             }
         });
@@ -75,7 +92,7 @@ var AjaxController = {
             layout: displayPosition,
             theme: 'defaultTheme',
             buttons: buttonsArray
-         
+
         });
         $(".btn-primary").focus();
         //console.log('html: ' + n.options.id);
